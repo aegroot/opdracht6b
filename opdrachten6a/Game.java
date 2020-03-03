@@ -2,8 +2,6 @@ package opdrachten6a;
 
 import java.time.LocalDate;
 
-import static java.lang.Math.pow;
-
 public class Game{
     private String naam;
     private int releasejaar;

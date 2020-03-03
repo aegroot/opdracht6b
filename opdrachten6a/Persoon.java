@@ -28,7 +28,7 @@ public class Persoon{
     } else {return false;}
 
     }
-    public boolean verkoop(Game g,Persoon p){
+    public boolean verkoop(Game g, Persoon p){
         boolean check=false;
         for(Game ga:games){
             if (g.equals(ga)){
@@ -46,6 +46,16 @@ public class Persoon{
         return false;}
 
     }
+
+    public Game zoekGameOpNaam(String naam) {
+        for (Game game : games) {
+            if (game.getNaam() == naam) {
+                return game;
+            }
+        }
+        return null;
+    }
+
     @Override
     public String toString(){
         String  endString=naam+" heeft een budget van "+budget+" en bezit de volgende games:\n";
