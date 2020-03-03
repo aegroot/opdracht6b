@@ -1,8 +1,6 @@
-package opdrachten6a;
+package opdrachten6b;
 
 import java.time.LocalDate;
-
-import static java.lang.Math.pow;
 
 public class Game{
     private String naam;

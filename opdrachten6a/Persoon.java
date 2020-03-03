@@ -1,4 +1,4 @@
-package opdrachten6a;
+package opdrachten6b;
 
 import java.util.ArrayList;
 
@@ -7,6 +7,9 @@ public class Persoon{
     private String naam;
     private double budget;
     private ArrayList<Game> games;
+
+
+
 
 
 
@@ -28,7 +31,7 @@ public class Persoon{
     } else {return false;}
 
     }
-    public boolean verkoop(Game g,Persoon p){
+    public boolean verkoop(Game g, Persoon p){
         boolean check=false;
         for(Game ga:games){
             if (g.equals(ga)){
@@ -46,6 +49,31 @@ public class Persoon{
         return false;}
 
     }
+
+
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> a) {
+        ArrayList<Game> nietbezit=new ArrayList<Game>();
+
+
+        for(Game g: games){
+            boolean x=false;
+            for (Game b : a){
+                if (b.equals(g)){
+                    x=true;
+                    break;
+
+                }
+
+            }
+            if (x==false){
+                nietbezit.add(g);
+            }
+
+        }
+        return nietbezit;
+    }
+
+
     @Override
     public String toString(){
         String  endString=naam+" heeft een budget van "+budget+" en bezit de volgende games:\n";
