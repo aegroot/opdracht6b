@@ -1,4 +1,4 @@
-package opdrachten6b;
+package opdrachten6a_orgineel;
 
 import java.util.ArrayList;
 
@@ -7,9 +7,6 @@ public class Persoon{
     private String naam;
     private double budget;
     private ArrayList<Game> games;
-
-
-
 
 
 
@@ -31,7 +28,7 @@ public class Persoon{
     } else {return false;}
 
     }
-    public boolean verkoop(Game g, Persoon p){
+    public boolean verkoop(Game g,Persoon p){
         boolean check=false;
         for(Game ga:games){
             if (g.equals(ga)){
@@ -49,43 +46,6 @@ public class Persoon{
         return false;}
 
     }
-
-<<<<<<< HEAD
-
-    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> a) {
-        ArrayList<Game> nietbezit=new ArrayList<Game>();
-
-
-        for(Game g: games){
-            boolean x=false;
-            for (Game b : a){
-                if (b.equals(g)){
-                    x=true;
-                    break;
-
-                }
-
-            }
-            if (x==false){
-                nietbezit.add(g);
-            }
-
-        }
-        return nietbezit;
-    }
-
-
-=======
-    public Game zoekGameOpNaam(String naam) {
-        for (Game game : games) {
-            if (game.getNaam() == naam) {
-                return game;
-            }
-        }
-        return null;
-    }
-
->>>>>>> d124d829b183075810d3d389bd8a606a55c85391
     @Override
     public String toString(){
         String  endString=naam+" heeft een budget van "+budget+" en bezit de volgende games:\n";
