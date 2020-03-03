@@ -1,4 +1,4 @@
-package opdrachten6b;
+package opdrachten6a;
 
 import java.time.LocalDate;
 
